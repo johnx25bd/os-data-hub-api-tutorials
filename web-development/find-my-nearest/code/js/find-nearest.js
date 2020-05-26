@@ -1,8 +1,6 @@
 
 var initLoad = true;
 
-const apiKey = 'FtAS7OR45lE3AR78KxrdGpfYq8uAAV6K';
-
 var coordsToFind = null;
 
 // 1. 
@@ -104,7 +102,7 @@ function fetchNearestFeatures(e) {
 
     // Define parameters object.
     let wfsParams = {
-        key: apiKey,
+        key: config.apikey,
         service: 'WFS',
         request: 'GetFeature',
         version: '2.0.0',
@@ -369,7 +367,7 @@ function generateQueryString(style = defaults.basemapStyle) {
 
     // Define parameters object.
     let params = {
-        key: apiKey,
+        key: config.apikey,
         service: 'WMTS',
         request: 'GetTile',
         version: '2.0.0',
